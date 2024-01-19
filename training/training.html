@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Training</title>
+	</head>
+
+	<body>
+		<script>
+			/*
+			-- 1 -- AFFICHAGE
+			-- 2 -- VARIABABLES
+			-- 3 -- TYPES DE DONNES
+			-- 4 -- CONSTANTES
+			-- 5 -- CONCATENATION
+			-- 6 -- OPERATEURS ARITHMETIQUES
+			-- 7 -- CONDITIONS
+			-- 7.1 -- SWITCH
+			-- 8 -- OPERATEURS LOGIQUES
+			-- 9 -- BOUCLES
+			-- 10 -- FONCTION PREDEFINIE
+			-- 11 -- FONCTION UTILISATEUR
+			-- 12 -- ARRAY
+			*/
+
+			// 1 affichage
+			document.write("<h1>Hello World !<h1> <br>"); // affichage dans le navigateur
+			console.log("Hello World !"); // affichage dans la console
+			alert("Hello World !"); // affichage dans une boîte de dialogue
+			prompt("tapez votre nom"); // affichage dans une boite de dialogue avec un champ de saisie
+
+			// 2 VARIABLES
+			var prenom = "John"; // variable de type string
+			var prenom = "John",
+				nom = "Doe",
+				age = 25; //variable de type string
+			prenom = "moha";
+			var panier = "pomme"; // variable de type string
+			panier += " poire"; // pareille que panier = panier + " poire"
+
+			// 3 TYPES DE DONNES (PRIMITIFS) (il existe aussi des types secondaires)
+			// STRING // chaine de caractere (texte)
+			// NUMBER // nombre
+			// BOOLEAN // true ou false
+
+			var x = 10;
+			var y = "10";
+			var z = x + y; // z = 1010 ont ne peut pas additionner un nombre et une chaîne de caractere
+
+			// 4 CONSTANTES
+			const LEGUME_VERT = "carotte"; // constante de type string (chaîne de caractère) une constante ne peut pas être mofifiée et s'écrit en majuscule
+
+			// 5 CONCATENATION (template strings)
+			var prenom = "John",
+				nom = "doe",
+				age = 25; // variable de type string
+			var resultat =
+				"Bonjour " + prenom + " " + nom + " vous avez " + age + " ans"; // concatenation de variable
+			var result2 = `Bonjour ${prenom} ${nom} vous avez ${age} ans`; // concatenation de ~variable avec les backtiks
+
+			// 6 OPERATEURS ARITHMETIQUES
+			// + addition
+			// - soustraction
+			// * multiplication
+			// / division
+			// % modulo (reste de la division)
+			// ** puissance
+			// ++ incrementation
+			// -- decrementation
+
+			// 7 CONDITIONS
+			if (a > b) {
+				// si a est superieur a b
+				document.write("a est superieur a b <br>");
+			} else if (a < b) {
+				// si a est inferieur a b
+				document.write("a est inferieur a b <br>");
+			} else if (a == b) {
+				// si a est strictement égal a b
+				document.write("a est egal a b <br>");
+			} else {
+				// sinon
+				document.write("je sais pas <br>");
+			}
+
+			// 7.1 CONDITIONS SWITCH
+			var couleur = "bleu";
+			switch (couleur) {
+				case "bleu":
+					document.write("la couleur est bleu <br>");
+					break;
+				case "rouge":
+					document.write("la couleur est rouge <br>");
+					break;
+				case "vert":
+					document.write("la couleur est vert <br>");
+					break;
+				default:
+					document.write("je ne connais pas cette couleur <br>");
+			}
+			// ****************************************************
+			if ((couleur = "bleu")) {
+				document.write("la couleur est bleue");
+			} else if ((couleur = "rouge")) {
+				document.write("la couleur est rouge");
+			} else if ((couleur = "vert")) {
+				document.write("la couleur est verte");
+			} else {
+				document.write("je ne sais pas");
+			}
+
+			//***********************Condition ternaire*****************************
+			var voiture = "bmw";
+			var result =
+				voiture == "bmw"
+					? "la voiture est une bmw"
+					: "la voiture n'est pas une bmw"; // condition ternaire
+			//si                // alors                      //sinon
+
+			// 8 OPERATEURS LOGIQUES
+			// && ET
+			// || OU
+			// | NON
+			// < inferieur b
+			// > superieur a
+			// <= inferieur ou egal a
+			// >= superieur ou egal a
+			// == egal a (compare la valeur)
+			// === egal a (compare la valeur et le type)
+			// != different de (compare la valeur)
+			// !== diferent de (compare la valeur et le type)
+			var a = 5;
+			var b = "5";
+
+			// 9 BOUCLES
+			var i = 0; // initialisation de la variable
+
+			while (i < 10) {
+				document.write("Bonjour" + "<br>");
+				i = i + 1; // incrementation de la variable
+			}
+
+			var i = 0; // initialisation de la variable
+			while (i < 10) {
+				if (i > 4) {
+					document.write("bonjour" + "<br>");
+				} else document.write("Bonjour---" + "<br>");
+				//terrnary operator
+				//(i > 4) ? document.write("bonjour"+ "<br>") : document.write("bonjour---" + "<br>");
+				i = i + 1;
+			}
+
+			var num = prompt("tapez un nombre");
+			for (var i = 1; i <= num; i++) {
+				if (i % 2 == 0) {
+					document.write("<span style='color:red'>" + i + "</span> <br>");
+				} else {
+					document.write(i + "<br>");
+				}
+			}
+
+			// 10 -- FONCTION PREDEFINIE (native)
+
+			// indexOf() // cherche la position d un element dans une chaine de caractere (si l element n est pas trouve il retourne -1)
+			// substr() // decoupe une chaine de caractere a partir d une position et prend un nombre de caracteres
+			// includes() // verifie si une chaine de caractere contient un element (retourne true ou false)
+			// toLowerCase() // met en minuscule une chaine de caractere
+			// toUpperCase() // met en majuscule une chaine de caractere
+			// length // retourne la longueur d une chaine de caractere(ou le nombre d element d un tableau)
+			var phrase = "Salut je m'appel Eddy";
+			document.write(phrase);
+
+			var position = phrase.indexOf("Eddy"); // cherche la position de Eddy dans la variable phrase
+			document.write("<br>" + position);
+
+			var phrase = "Bonjour Pierre comment vas-tu ?";
+			document.write(phrase + "<br>");
+			var decoupPhrase = phrase.substr(8, 5); // decoupe la phrase a partir de la position 8 et prend 5 caracteres
+			document.write(decoupPhrase + "<br>");
+
+			var phrase = "Bonjour Pierre comment vas-tu ?";
+			var majuscule = phrase.toUpperCase();
+			var minuscule = phrase.toLowerCase();
+			document.write(phrase + "<br>" + majuscule + "<br>" + minuscule);
+
+			var phrase = "Bonjour Pierre comment vas-tu ?";
+			document.write(phrase + "<br>");
+			var decoupPhrase = phrase.substr(8, 5); // decoupe la phrase a partir de la position 8 et prend 5 caracteres
+			document.write(decoupPhrase + "<br>");
+			document.write(phrase.toLocaleLowerCase() + "<br>");
+			document.write(phrase.toLocaleUpperCase() + "<br>");
+
+			var email = prompt("tapez votre email");
+			if (email.includes("@")) {
+				alert("email valide");
+			} else {
+				alert("email invalide");
+			}
+			//  11 -- FONCTION UTILISATEUR
+			function myNameIs() {
+				// déclaration de la fonction classique
+				document.write("Bonjour je m'appelle Eddy");
+			}
+			myNameIs()(
+				// on appelle une fonction classique
+				// ***************************************************************
+				function () {
+					// fonction anonyme ou autoexécutée ou autoinvoquée************
+					//
+					document.write("Bonjour je m'appelle Eddy");
+				}
+			)();
+			// **************************************()=>{}******Fonction fléchée****stockée dans une variable
+			var maFunction = () => {
+				document.write("<h1>Hello World !");
+				alert("Hello World !");
+			};
+			// ********************Les arguments************************************************************
+			function myNameIs(prenom, nom, age) {
+				document.write(
+					"Bonjour je m'appelle " +
+						prenom +
+						nom +
+						" et j'ai " +
+						age +
+						" ans  <br>"
+				);
+			}
+			myNameIs("Myriam", "Braconier", 49);
+			myNameIs("John");
+			// 12 -- ARRAY*************************************************************************************************
+			var monTab = ["pomme", "poire", "banane", "fraise", 55, true]; //déclaration d'un tableau (ici position: 0-1-2-3-4-5)
+			document.write(monTab[1]);
+			var tabMulti = [
+				["pomme", "poire", "banane", "fraise"][ //*************tableau enfant*******************//0
+					("carotte", "navet", "banane", "courgette")
+				][("tomate", "radis", "concombre", "navet")], //*************tableau enfant*******************//1 //***********//3
+			];
+			return tabMulti[0][1]; // on indique la position du terme que l'on recherche ici poire
+			console.log(tabMulti[2][3]);
+// *************************
+			var maConv = ["Salut", "ca va ?", "oui et toi ?"];
+			maConv.push(" Bien merci !"); // push permet d'ajouter un élément à la fin du tableau
+			document.write(maConv);
+// *****************************
+			var panier = ["pomme", "poire", "banane", "fraise"];
+			// ajouter ananas à la fin du tableau
+			// ajouter cerise au debut du tableau
+			// supprimer banane du tableau
+			// remplacer poire par framboise
+			panier.push("ananas");
+			document.write(panier);
+			return panier.unshift("cerise");
+			document.write(panier);
+			return panier.splice(3,1);
+			document.write(panier);
+			return panier.splice(2,1,"framboise");
+			document.write(panier);
+// ******************************************************
+var panier = ["pomme", "poire", "banane", "fraise"];
+			// afficher le contenu comme ceci : 
+			// pomme--
+			// poire--
+			// banane--
+			// fraise--
+			panier.shift(1,2,);
+			document.write(panier);
+			for (var i = 0; i < panier.length; i++) {
+            document.write(panier[i] + "-- <br>");
+        }
+		</script>
+	</body>
+</html>

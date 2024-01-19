@@ -1,0 +1,14 @@
+#freezer {
+	height: 200px;
+    width:auto;
+	position: absolute;
+	transition: all 0.5s linear;
+}
+
+body {
+	background: url("../dom/images/jeux/fond.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}

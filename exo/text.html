@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// exo 1
+			// faire en sorte de pouvoir saisir une couleur dans une boite de dialogue et afficher une phrase de si condition il ya:
+
+			// var couleur = prompt("tapez une couleur");
+			// if (couleur == "rouge"){
+			//     alert("La couleur saisit est le rouge.");
+			// }
+			// else if (couleur == "bleu"){
+			//     alert("La couleur saisit est le bleu.");
+			// }
+			// else{
+			//     alert("Vous n'avez pas entré de couleur disponible!");
+			// }
+
+			//exo 2
+			// faire en sorte selon mon age de me dire si je suis majeur ou mineur si je suis majeur je peut entrer en boite sinon je ne peux pas:
+
+			// var age = prompt("Entrez votre âge");
+			// age = parseInt(age)
+
+			// if (age >= 18 && age <= 100) {
+			// 	alert("Vous pouvez entrer en boîte!");
+			// } else if (age > 0 && age < 18) {
+			// 	alert("Vous ne pouvez pas entrer en boîte!");
+			// } else {
+			// 	alert("Âge non valide");
+			// }
+
+			//exo 3
+
+			// var mdp = "admin";
+			// var pseudo = "monPseudo";
+			// var connexionPseudo = prompt("Veuillez entrer un pseudo:");
+			// var connexionMdp = prompt("Veuillez entrer un mot de passe:");
+			// if (connexionPseudo == pseudo && connexionMdp == mdp){
+			//     alert("Bienvenue sur votre compte, monPseudo!");
+			// }
+			// else{
+			//     alert("Ce compte n'existe pas!");
+			// }
+
+			var num1 = parseInt(prompt("Entrez le premier nombre"));
+			var operateur = prompt("Entrez l'opérateur");
+			var num2 = parseInt(prompt("Entrez le deuxième nombre"));
+
+			if (operateur == "+") {
+				var resultat = num1 + num2;
+				alert("Le résultat de l'addition est : " + resultat);
+			} else if (operateur == "*") {
+				var resultat = num1 * num2;
+				alert("Le résultat de la multiplication est : " + resultat);
+			} else if (operateur == "/") {
+				var resultat = num1 / num2;
+				alert("Le résultat de la division est : " + resultat);
+			} else if (operateur == "-") {
+				var resultat = num1 - num2;
+				alert("Le résultat de la soustraction est : " + resultat);
+			} else {
+				alert("Erreur..");
+			}
+
+
+
+			// alert(eval(num1 + operateur + num2));
+
+			// var num1 = parseInt(prompt("Entrez le premier nombre"));
+			// var operateur = prompt("Entrez l'opérateur");
+			// var num2 = parseInt(prompt("Entrez le deuxième nombre"));
+			// var resultat = (operateur == "+") ? num1 + num2 :
+            //    (operateur == "-") ? num1 - num2 :
+            //    (operateur == "*") ? num1 * num2 :
+			//    (operateur == "/") ? num1 / num2 :
+            //    "Erreur..";
+
+			//    alert("Le résultat de l'opération est : " + resultat);
+
+
+			//exo 4
+			var i = 0; // Initialisation de la variable
+			while (i < 10) {
+				if (i < 5) {
+					document.write("Bonjour----" + "<br>");
+				} else {
+					document.write("Bonjour" + "<br>");
+				}
+				i = i + 1; // Incrémentation de la variable
+			}
+		</script>
+	</body>
+</html>

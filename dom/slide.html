@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img id="slider" src="images/img/a.jpg" alt="" onclick="changeImage()">
+    <style>
+        img {
+            width:400px;
+            height: 300px;
+        }
+    </style>
+    <script>
+
+// function changeImage() {
+//     var maBaliseImg = document.querySelector("img").getAttribute("src");
+//     switch (maBaliseImg) {
+//     case "images/img/a.jpg": 
+//     document.querySelector("img").src = "images/img/b.jpg";
+//     break;
+//     case "images/img/b.jpg": document.querySelector("img").src = "images/img/c.jpg";
+//     break;
+//     case "images/img/c.jpg": document.querySelector("img").src = "images/img/d.jpg";
+//     break;
+//     case "images/img/d.jpg": document.querySelector("img").src = "images/img/e.jpg";
+//     break;
+//     case "images/img/e.jpg": document.querySelector("img").src = "images/img/a.jpg";
+//     break;
+// }
+// }
+// setInterval(changeImage, 1000);
+
+// *****************************Autre méthode avec tableau*******************************
+
+    var tabImg = ["images/img/a.jpg","images/img/b.jpg","images/img/c.jpg","images/img/d.jpg","images/img/e.jpg"];
+    var i = 0;
+    
+function changeImage(){
+    document.querySelector("img").src = tabPics[i];
+            i++;
+            if (i == tabPics.length) {
+                i = 0;
+            }
+        }
+setInterval(changeImage, 1000);
+    </script>
+</body>
+</html>
